@@ -92,10 +92,8 @@
 </main>
 </template>
 <script>
-
     export default {
         mounted() {
-            console.log('Home Mounted.');
             $('.button-collapse').sideNav('hide');
             $('.parallax').parallax();
             setTimeout(function(){ $('.collapsible').collapsible('open', 0); }, 500);

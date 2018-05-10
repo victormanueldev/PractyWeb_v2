@@ -26,4 +26,9 @@ Route::get('load', function(){
 });
 Route::group(['prefix' => 'api'], function(){
     Route::resource('/cajas', 'CajaController');
+    Route::resource('/facturas', 'FacturasController', [
+        'except' => ['show']
+    ]);
 });
+
+Route::post('/api/facturas', 'FacturasController@show')->name('facturas.show');

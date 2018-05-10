@@ -130,8 +130,6 @@
     <script src="{{asset('js/vue-app.js')}}"></script>
     <script src="{{asset('assets/js/materialize.min.js')}}"></script>
     <!-- <script src="{{asset('js/jquery.min.js')}}"></script> -->
-    
-    
     @yield('ini-scripts')
     <script type="text/Javascript">
         // $(function(){

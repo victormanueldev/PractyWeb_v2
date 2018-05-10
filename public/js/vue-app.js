@@ -825,7 +825,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\home.vue"
+Component.options.__file = "resources/assets/js/components/home.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -834,9 +834,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8da41194", Component.options)
+    hotAPI.createRecord("data-v-6ebcac14", Component.options)
   } else {
-    hotAPI.reload("data-v-8da41194", Component.options)
+    hotAPI.reload("data-v-6ebcac14", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -872,7 +872,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\ventasGlobales.vue"
+Component.options.__file = "resources/assets/js/components/ventasGlobales.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -881,9 +881,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b2b58922", Component.options)
+    hotAPI.createRecord("data-v-1baf03a2", Component.options)
   } else {
-    hotAPI.reload("data-v-b2b58922", Component.options)
+    hotAPI.reload("data-v-1baf03a2", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -919,7 +919,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\ventasCaja.vue"
+Component.options.__file = "resources/assets/js/components/ventasCaja.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -928,9 +928,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-03d3f2f3", Component.options)
+    hotAPI.createRecord("data-v-32e695b3", Component.options)
   } else {
-    hotAPI.reload("data-v-03d3f2f3", Component.options)
+    hotAPI.reload("data-v-32e695b3", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -15211,10 +15211,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        console.log('Home Mounted.');
         $('.button-collapse').sideNav('hide');
         $('.parallax').parallax();
         setTimeout(function () {
@@ -15423,7 +15421,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-8da41194", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-6ebcac14", module.exports)
   }
 }
 
@@ -15536,7 +15534,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-b2b58922", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-1baf03a2", module.exports)
   }
 }
 
@@ -15585,44 +15583,206 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Ventas por cajas.');
-        $('.button-collapse').sideNav('hide');
-        $('.collapsible').collapsible();
-        $('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15, // Creates a dropdown of 15 years to control year,
-            today: 'Today',
-            clear: 'Clear',
-            close: 'Ok',
-            closeOnSelect: false, // Close upon selecting a date,
-            container: undefined // ex. 'body' will append picker to body
-        });
-        this.fetchData();
-    },
-    data: function data() {
-        return {
-            cajas: []
-        };
-    },
+	mounted: function mounted() {
+		//console.log('Ventas por cajas.')
+		$('.button-collapse').sideNav('hide'); //Ocultar el SideNav
+		this.mostrarCajas();
+	},
+	data: function data() {
+		return {
+			cajas: [],
+			fecha_inicio: '',
+			fecha_fin: '',
+			numero_caja: '',
+			ventas: []
+		};
+	},
 
-    methods: {
-        fetchData: function fetchData() {
-            var _this = this;
+	methods: {
+		/** 
+  * Consulta los datos de las cajas y los guarda en la variable cajas
+   */
+		mostrarCajas: function mostrarCajas() {
+			var _this = this;
 
-            axios.get('/api/cajas').then(function (res) {
-                _this.cajas = res.data;
-            }).catch(function (err) {
-                console.log(err);
-            });
-        },
-        mostrarCaja: function mostrarCaja(usuario) {
-            console.log(usuario);
-        }
-    }
+			axios.get('/api/cajas').then(function (res) {
+				_this.cajas = res.data;
+			}).catch(function (err) {
+				console.log(err);
+			});
+		},
+
+		/** 
+  * Envia los datos de la vista a la API facturas
+   */
+		totalVentasCaja: function totalVentasCaja() {
+			var _this2 = this;
+
+			var url = '/api/facturas';
+			axios.post(url, {
+				fecha_inicio: this.fecha_inicio + ' 00:00:00',
+				fecha_fin: this.fecha_fin + ' 23:00:00',
+				numero_caja: this.numero_caja
+			}).then(function (res) {
+				_this2.ventas = res.data[0];
+				if (res.data[0].totalFactura == 0 || _this2.numero_caja == '') {
+					//Valida que hayan registros de ventas en las fechas seleccionadas
+					var msj = "No se han encontrado registros de ventas";
+					var $toastContent = $('<span>' + msj + '</span>').add($('<button onclick="Materialize.Toast.removeAll();" class="btn-flat toast-action" >X</button>'));
+					Materialize.toast($toastContent, 3000);
+				} else {
+					var msj = "Consulta Actualizada";
+					var $toastContent = $('<span>' + msj + '</span>').add($('<button onclick="Materialize.Toast.removeAll();" class="btn-flat toast-action" >X</button>'));
+					Materialize.toast($toastContent, 3000);
+				}
+			}).catch(function (err) {
+				console.log(err);
+			});
+		}
+	},
+	computed: {
+		/** 
+  * Metodo que se ejecuta si alguna de las dependencias (fecha_inicio, fecha_fin) cambian
+   */
+		validarFechas: function validarFechas() {
+			if (this.fecha_inicio > this.fecha_fin) {
+				//Valida que la fecha de inicio sea menor que la fehca Fin
+				var msj = "La fecha de inicio debe ser menor a la fecha fin";
+				var $toastContent = $('<span>' + msj + '</span>').add($('<button onclick="Materialize.Toast.removeAll();" class="btn-flat toast-action" >X</button>'));
+				Materialize.toast($toastContent, 5000);
+				return true;
+			} else if (this.fecha_fin == '') {
+				return;
+			}
+		}
+	}
 });
 
 /***/ }),
@@ -15652,7 +15812,33 @@ var render = function() {
                 _c("div", { staticClass: "col s12 m6 l6 center" }, [
                   _c(
                     "select",
-                    { staticClass: "browser-default" },
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.numero_caja,
+                          expression: "numero_caja"
+                        }
+                      ],
+                      staticClass: "browser-default",
+                      staticStyle: { margin: "15px 0" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.numero_caja = $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        }
+                      }
+                    },
                     [
                       _c(
                         "option",
@@ -15661,21 +15847,344 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _vm._l(_vm.cajas, function(caja) {
-                        return _c("option", { key: caja.codigoUsuario }, [
-                          _vm._v("Caja # " + _vm._s(caja.codigoUsuario))
-                        ])
+                        return _c(
+                          "option",
+                          {
+                            key: caja.codigoUsuario,
+                            domProps: { value: caja.codigoUsuario }
+                          },
+                          [_vm._v("Caja # " + _vm._s(caja.codigoUsuario))]
+                        )
                       })
                     ],
                     2
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(0),
+                _c("div", { staticClass: "col s12 m6 l6" }, [
+                  _c("label", { attrs: { for: "icon_prefix" } }, [
+                    _vm._v("Fecha Inicio")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "input-field center " }, [
+                    _c("i", { staticClass: "material-icons prefix" }, [
+                      _vm._v("date_range")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.fecha_inicio,
+                          expression: "fecha_inicio"
+                        }
+                      ],
+                      attrs: { id: "icon_prefix", type: "date" },
+                      domProps: { value: _vm.fecha_inicio },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.fecha_inicio = $event.target.value
+                        }
+                      }
+                    })
+                  ])
+                ]),
                 _vm._v(" "),
-                _vm._m(1)
+                _c("div", { staticClass: "col s12 m6 l6 " }, [
+                  _c("label", { attrs: { for: "icon_prefix2" } }, [
+                    _vm._v("Fecha Fin")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "input-field center " }, [
+                    _c("i", { staticClass: "material-icons prefix" }, [
+                      _vm._v("date_range")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.fecha_fin,
+                          expression: "fecha_fin"
+                        }
+                      ],
+                      attrs: { id: "icon_prefix2", type: "date" },
+                      domProps: { value: _vm.fecha_fin },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.fecha_fin = $event.target.value
+                        }
+                      }
+                    })
+                  ])
+                ])
               ]
             )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-action" }, [
+            !_vm.validarFechas
+              ? _c(
+                  "button",
+                  {
+                    staticClass:
+                      "btn waves-effect waves-light btn-large red darken-4 ",
+                    staticStyle: {
+                      display: "block",
+                      margin: "auto",
+                      "border-radius": "5px"
+                    },
+                    attrs: { type: "submit", name: "action" },
+                    on: {
+                      click: function($event) {
+                        _vm.totalVentasCaja()
+                      }
+                    }
+                  },
+                  [
+                    _vm._v("Consultar\n\t\t\t\t\t\t"),
+                    _c("i", { staticClass: "material-icons right" }, [
+                      _vm._v("search")
+                    ])
+                  ]
+                )
+              : _c(
+                  "button",
+                  {
+                    staticClass:
+                      "btn waves-effect waves-light btn-large red darken-4 ",
+                    staticStyle: {
+                      display: "block",
+                      margin: "auto",
+                      "border-radius": "5px"
+                    },
+                    attrs: { type: "submit", name: "action", disabled: "" },
+                    on: {
+                      click: function($event) {
+                        _vm.totalVentasCaja()
+                      }
+                    }
+                  },
+                  [
+                    _vm._v("Consultar\n\t\t\t\t\t\t"),
+                    _c("i", { staticClass: "material-icons right" }, [
+                      _vm._v("search")
+                    ])
+                  ]
+                )
           ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col s12 m6 l6" }, [
+        _c("div", { staticClass: "card hoverable" }, [
+          _c(
+            "div",
+            { staticClass: "card-content  white red-text text-darken-4" },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticStyle: { "text-align": "right" } }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-stats-number",
+                    staticStyle: { "margin-left": "100px" }
+                  },
+                  [_vm._v("$" + _vm._s(_vm.ventas.valorEfectivo))]
+                )
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col s12 m6 l6" }, [
+        _c("div", { staticClass: "card hoverable" }, [
+          _c(
+            "div",
+            { staticClass: "card-content  white red-text text-darken-4" },
+            [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticStyle: { "text-align": "right" } }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-stats-number",
+                    staticStyle: { "margin-left": "100px" }
+                  },
+                  [_vm._v("$" + _vm._s(_vm.ventas.valorCredito))]
+                )
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col s12 m6 l6" }, [
+        _c("div", { staticClass: "card hoverable" }, [
+          _c(
+            "div",
+            { staticClass: "card-content  white red-text text-darken-4" },
+            [
+              _vm._m(2),
+              _vm._v(" "),
+              _c("div", { staticStyle: { "text-align": "right" } }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-stats-number",
+                    staticStyle: { "margin-left": "100px" }
+                  },
+                  [_vm._v("$" + _vm._s(_vm.ventas.valorDebito))]
+                )
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col s12 m6 l6" }, [
+        _c("div", { staticClass: "card hoverable" }, [
+          _c(
+            "div",
+            { staticClass: "card-content  white red-text text-darken-4" },
+            [
+              _vm._m(3),
+              _vm._v(" "),
+              _c("div", { staticStyle: { "text-align": "right" } }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-stats-number",
+                    staticStyle: { "margin-left": "100px" }
+                  },
+                  [_vm._v("$" + _vm._s(_vm.ventas.valorCheque))]
+                )
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col s12 m6 l6" }, [
+        _c("div", { staticClass: "card hoverable" }, [
+          _c(
+            "div",
+            { staticClass: "card-content  white red-text text-darken-4" },
+            [
+              _vm._m(4),
+              _vm._v(" "),
+              _c("div", { staticStyle: { "text-align": "right" } }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-stats-number ",
+                    staticStyle: { "margin-left": "100px" }
+                  },
+                  [_vm._v("$" + _vm._s(_vm.ventas.valorBono))]
+                )
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col s12 m6 l6" }, [
+        _c("div", { staticClass: "card hoverable" }, [
+          _c(
+            "div",
+            { staticClass: "card-content  white red-text text-darken-4" },
+            [
+              _vm._m(5),
+              _vm._v(" "),
+              _c("div", { staticStyle: { "text-align": "right" } }, [
+                _c("h4", { staticClass: "card-stats-number" }, [
+                  _vm._v("$" + _vm._s(_vm.ventas.valorCXC))
+                ])
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col s12 m6 l6" }, [
+        _c("div", { staticClass: "card hoverable" }, [
+          _c(
+            "div",
+            { staticClass: "card-content  white red-text text-darken-4" },
+            [
+              _vm._m(6),
+              _vm._v(" "),
+              _c("div", { staticStyle: { "text-align": "right" } }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-stats-number",
+                    staticStyle: { "margin-left": "100px" }
+                  },
+                  [_vm._v("$" + _vm._s(_vm.ventas.totalFactura))]
+                )
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col s12 m6 l6" }, [
+        _c("div", { staticClass: "card hoverable" }, [
+          _c(
+            "div",
+            { staticClass: "card-content  white red-text text-darken-4" },
+            [
+              _vm._m(7),
+              _vm._v(" "),
+              _c("div", { staticStyle: { "text-align": "right" } }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-stats-number",
+                    staticStyle: { "margin-left": "100px" }
+                  },
+                  [_vm._v("$" + _vm._s(_vm.ventas.totalEgresos))]
+                )
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col s12 m6 l6" }, [
+        _c("div", { staticClass: "card hoverable" }, [
+          _c(
+            "div",
+            { staticClass: "card-content  white red-text text-darken-4" },
+            [
+              _vm._m(8),
+              _vm._v(" "),
+              _c("div", { staticStyle: { "text-align": "right" } }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-stats-number",
+                    staticStyle: { "margin-left": "100px" }
+                  },
+                  [_vm._v("$" + _vm._s(_vm.ventas.valorNeto))]
+                )
+              ])
+            ]
+          )
         ])
       ])
     ])
@@ -15686,32 +16195,81 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col s12 m6 l6 center" }, [
-      _c("div", { staticClass: "input-field center " }, [
-        _c("i", { staticClass: "material-icons prefix" }, [
-          _vm._v("date_range")
-        ]),
-        _vm._v(" "),
-        _c("input", { staticClass: "datepicker", attrs: { type: "text" } }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "icon_prefix" } }, [_vm._v("Fecha Inicio")])
-      ])
+    return _c("p", { staticClass: "card-stats-title" }, [
+      _c("i", { staticClass: "mdi-social-group-add" }),
+      _vm._v(" Total Efectivo")
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col s12 m6 l6 center" }, [
-      _c("div", { staticClass: "input-field center " }, [
-        _c("i", { staticClass: "material-icons prefix" }, [
-          _vm._v("date_range")
-        ]),
-        _vm._v(" "),
-        _c("input", { staticClass: "datepicker", attrs: { type: "text" } }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "icon_prefix" } }, [_vm._v("Fecha Fin")])
-      ])
+    return _c("p", { staticClass: "card-stats-title" }, [
+      _c("i", { staticClass: "mdi-social-group-add" }),
+      _vm._v(" Total Crédito")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "card-stats-title" }, [
+      _c("i", { staticClass: "mdi-social-group-add" }),
+      _vm._v(" Total Débito")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "card-stats-title" }, [
+      _c("i", { staticClass: "mdi-social-group-add" }),
+      _vm._v(" Cheques")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "card-stats-title" }, [
+      _c("i", { staticClass: "mdi-social-group-add" }),
+      _vm._v(" Bonos")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "card-stats-title" }, [
+      _c("i", { staticClass: "mdi-social-group-add" }),
+      _vm._v(" CXC")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "card-stats-title" }, [
+      _c("i", { staticClass: "mdi-social-group-add" }),
+      _vm._v(" Total Recaudo")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "card-stats-title" }, [
+      _c("i", { staticClass: "mdi-social-group-add" }),
+      _vm._v(" Total Egresos")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "card-stats-title" }, [
+      _c("i", { staticClass: "mdi-social-group-add" }),
+      _vm._v(" NETO")
     ])
   }
 ]
@@ -15720,7 +16278,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-03d3f2f3", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-32e695b3", module.exports)
   }
 }
 
