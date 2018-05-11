@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\RecibosEgresos;
 use App\Factura;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -45,7 +44,7 @@ class FacturasController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\ttp\Response
      */
     public function show(Request $request)
     {
@@ -124,16 +123,16 @@ class FacturasController extends Controller
 
         //Añadir datos a la coleccion
         $data->push([
-            'totalFactura' => $suma_facturas,
-            'totalDescuentos' => $suma_descuentos,
-            'valorEfectivo' => $suma_efectivo,
-            'valorCredito' => $suma_creditos,
-            'valorDebito' => $suma_debitos,
-            'valorCheque' => $suma_cheques,
-            'valorCXC' => $suma_cxc,
-            'valorBono' => $suma_bonos,
-            'totalEgresos' => $suma_egresos,
-            'valorNeto' => $neto
+            'totalFactura' => number_format($suma_facturas, 0, ",", "."),
+            'totalDescuentos' => number_format($suma_descuentos, 0, ",", "."),
+            'valorEfectivo' => number_format($suma_efectivo, 0, ",", "."),
+            'valorCredito' => number_format($suma_creditos, 0, ",", "."),
+            'valorDebito' => number_format($suma_debitos, 0, ",", "."),
+            'valorCheque' => number_format($suma_cheques, 0, ",", "."),
+            'valorCXC' => number_format($suma_cxc, 0, ",", "."),
+            'valorBono' => number_format($suma_bonos, 0, ",", "."),
+            'totalEgresos' => number_format($suma_egresos, 0, ",", "."),
+            'valorNeto' => number_format($neto, 0, ",", ".")
         ]);
 
         //Convertir la coleccion a objeto JSON

@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 import Home from './components/home.vue';
 import VentasGlobales from './components/ventasGlobales.vue';
 import VentasPorCaja from './components/ventasCaja.vue';
+import VentasLinea from './components/ventasLinea.vue';
+
 require('./bootstrap');
 
 import { routes } from './routes.js';

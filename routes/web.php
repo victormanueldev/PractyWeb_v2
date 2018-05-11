@@ -29,6 +29,10 @@ Route::group(['prefix' => 'api'], function(){
     Route::resource('/facturas', 'FacturasController', [
         'except' => ['show']
     ]);
+    Route::resource('lineas', 'LineasController' ,[
+        'except' => ['show']
+    ]);
 });
 
 Route::post('/api/facturas', 'FacturasController@show')->name('facturas.show');
+Route::post('/api/lineas2', 'LineasController@show')->name('lineas.show');

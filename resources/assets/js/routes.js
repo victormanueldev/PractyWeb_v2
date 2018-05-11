@@ -1,6 +1,7 @@
 import Home from './components/home.vue';
 import VentasGlobales from './components/ventasGlobales.vue';
 import VentasPorCaja from './components/ventasCaja.vue';
+import VentasLinea from './components/ventasLinea.vue';
 
 export const routes = [
     
@@ -9,12 +10,16 @@ export const routes = [
         component: VentasGlobales
     },
     {
-        path: '/ventas/porCaja',
+        path: '/ventas/caja',
         component: VentasPorCaja
     },
     {
         path: '/home',
         component: Home
+    },
+    {
+        path: '/ventas/linea',
+        component: VentasLinea
     }
     
 ];

@@ -80,9 +80,13 @@
                         </router-link >
                     </li>
                     <li>
-                        <router-link  to="/ventas/porCaja" class="collapsible-header waves-effect waves-teal active">
+                        <router-link  to="/ventas/caja" class="collapsible-header waves-effect waves-teal active">
                             <i class="material-icons light">attach_money</i>Ventas Por Caja
                         </router-link >
+                    </li>
+                    <li>
+                        <router-link  to="/ventas/linea" class="collapsible-header waves-effect waves-teal active">
+                            <i class="material-icons light">attach_money</i>Ventas Por Linea
                     </li>
                     <li>
                         <a href="{{ route('logout') }}" class="collapsible-header waves-effect waves-teal active"
