@@ -35,4 +35,7 @@ Route::group(['prefix' => 'api'], function(){
 });
 
 Route::post('/api/facturas', 'FacturasController@show')->name('facturas.show');
-Route::post('/api/lineas2', 'LineasController@show')->name('lineas.show');
+Route::post('/api/lineas', 'LineasController@show')->name('lineas.show');
+Route::get('/ventas/linea', function(){
+    return redirect()->to('/ventas/linea');
+});

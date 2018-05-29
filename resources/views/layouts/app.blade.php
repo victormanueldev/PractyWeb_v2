@@ -74,11 +74,11 @@
                             <i class="material-icons light">home</i>Home
                         </router-link>
                     </li>
-                    <li>
+                    <!-- <li>
                         <router-link  to="/ventas/globales" class="collapsible-header waves-effect waves-teal active">
                             <i class="material-icons light">assessment</i>Ventas Globales
                         </router-link >
-                    </li>
+                    </li> -->
                     <li>
                         <router-link  to="/ventas/caja" class="collapsible-header waves-effect waves-teal active">
                             <i class="material-icons light">attach_money</i>Ventas Por Caja

@@ -9,8 +9,6 @@
   
 </head>
 <body>
-
-
   <div class="fondo">
     <div class="row"> 
         <div class="cardlogin">
@@ -59,6 +57,7 @@
             <strong>{{ $errors->first('login') }}</strong>
         </span> -->
         <script>
+            
             var error = "Estas credenciales no coinciden con nuestros registros";
             var $toastContent = $('<span>'+error+'</span>').add($('<button onclick="Materialize.Toast.removeAll();" class="btn-flat toast-action" >Cerrar</button>'));
             Materialize.toast($toastContent, 8000);

@@ -96,7 +96,7 @@
         mounted() {
             $('.button-collapse').sideNav('hide');
             $('.parallax').parallax();
-            setTimeout(function(){ $('.collapsible').collapsible('open', 0); }, 500);
+           setTimeout(function(){ $('.collapsible').collapsible('open', 0); }, 500);
         },
         data() {
             return {

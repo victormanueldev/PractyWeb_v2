@@ -49,7 +49,7 @@
 				<div class="card-content  white red-text text-darken-4">
 					<p class="card-stats-title"><i class="mdi-social-group-add"></i> Total Efectivo</p>
 					<div style="text-align: right">
-						<h4 class="card-stats-number" style="margin-left: 100px">${{ventas.valorEfectivo}}</h4>
+						<h4 class="card-stats-number" >${{ventas.valorEfectivo}}</h4>
 					</div>
 					<!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="red-text text-lighten-5">from yesterday</span>
 					</p> -->
@@ -62,7 +62,7 @@
 				<div class="card-content  white red-text text-darken-4">
 					<p class="card-stats-title"><i class="mdi-social-group-add"></i> Total Crédito</p>
 					<div style="text-align: right">
-						<h4 class="card-stats-number" style="margin-left: 100px">${{ventas.valorCredito}}</h4>
+						<h4 class="card-stats-number" >${{ventas.valorCredito}}</h4>
 					</div>
 					<!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="red-text text-lighten-5">from yesterday</span>
 					</p> -->
@@ -75,7 +75,7 @@
 				<div class="card-content  white red-text text-darken-4">
 					<p class="card-stats-title"><i class="mdi-social-group-add"></i> Total Débito</p>
 					<div style="text-align: right">
-						<h4 class="card-stats-number" style="margin-left: 100px">${{ventas.valorDebito}}</h4>
+						<h4 class="card-stats-number" >${{ventas.valorDebito}}</h4>
 					</div>
 					<!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="red-text text-lighten-5">from yesterday</span>
 					</p> -->
@@ -88,7 +88,7 @@
 				<div class="card-content  white red-text text-darken-4">
 					<p class="card-stats-title"><i class="mdi-social-group-add"></i> Cheques</p>
 					<div style="text-align: right">
-						<h4 class="card-stats-number" style="margin-left: 100px">${{ventas.valorCheque}}</h4>
+						<h4 class="card-stats-number" >${{ventas.valorCheque}}</h4>
 					</div>
 					<!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="red-text text-lighten-5">from yesterday</span>
 					</p> -->
@@ -101,7 +101,7 @@
 				<div class="card-content  white red-text text-darken-4">
 					<p class="card-stats-title"><i class="mdi-social-group-add"></i> Bonos</p>
 					<div style="text-align: right">
-						<h4 class="card-stats-number " style="margin-left: 100px">${{ventas.valorBono}}</h4>
+						<h4 class="card-stats-number " >${{ventas.valorBono}}</h4>
 					</div>
 					<!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="red-text text-lighten-5">from yesterday</span>
 					</p> -->
@@ -127,7 +127,7 @@
 				<div class="card-content  white red-text text-darken-4">
 					<p class="card-stats-title"><i class="mdi-social-group-add"></i> Total Recaudo</p>
 					<div style="text-align: right">
-						<h4 class="card-stats-number" style="margin-left: 100px">${{ventas.totalFactura}}</h4>
+						<h4 class="card-stats-number" >${{ventas.totalFactura}}</h4>
 					</div>
 					<!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="red-text text-lighten-5">from yesterday</span>
 					</p> -->
@@ -139,7 +139,7 @@
 				<div class="card-content  white red-text text-darken-4">
 					<p class="card-stats-title"><i class="mdi-social-group-add"></i> Total Egresos</p>
 					<div style="text-align: right">
-						<h4 class="card-stats-number" style="margin-left: 100px">${{ventas.totalEgresos}}</h4>
+						<h4 class="card-stats-number">${{ventas.totalEgresos}}</h4>
 					</div>
 					<!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="red-text text-lighten-5">from yesterday</span>
 					</p> -->
@@ -151,7 +151,7 @@
 				<div class="card-content  white red-text text-darken-4">
 					<p class="card-stats-title"><i class="mdi-social-group-add"></i> NETO</p>
 					<div style="text-align: right">
-						<h4 class="card-stats-number" style="margin-left: 100px">${{ventas.valorNeto}}</h4>
+						<h4 class="card-stats-number" >${{ventas.valorNeto}}</h4>
 					</div>
 					<!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="red-text text-lighten-5">from yesterday</span>
 					</p> -->

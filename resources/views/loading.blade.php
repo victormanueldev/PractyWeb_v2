@@ -63,7 +63,8 @@
 </body>
 <script src="{{asset('js/jquery.js')}}"></script>
 <script language='JavaScript'>
-    var pagina="http://localhost:8000/home";
+  //var host = window.location.host;
+    var pagina= "/home";
     function redireccionar() {
       location.href=pagina;
     }
